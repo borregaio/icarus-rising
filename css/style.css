@@ -1,0 +1,113 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    height: 100vh;
+}
+
+/* Home */
+
+#home {
+    background-color: pink;
+display: flex;
+align-items: center;
+}
+
+#home a {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    text-decoration: none;
+
+}
+
+/* #home h1, h2 {
+position: absolute;
+margin-left: 100px;
+}
+
+#home h1 {
+    top: 60%;
+}
+
+#home h2 {
+    top: 70%;
+} */
+
+/* About */
+
+#about {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.about-image {
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../images/profile.png)
+}
+
+/* Skills */
+
+#skills {
+    background-color: pink;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+}
+
+#skills h3 {
+    text-align: center;
+}
+
+/* Projects */
+
+#projects {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+}
+
+#projects h3 {
+    text-align: center;
+}
+
+/* Contact */
+
+#contact {
+    background-color: pink;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+}
+
+#contact h3 {
+    text-align: center;
+}
+
+#contact p {
+    padding-left: 0;
+}
+
+.contact-info ul {
+list-style-type: none;
+padding: 0;
+}
+
+/* Footer */
+
+footer  {
+    background-color: pink;
+    text-align: center;
+}
+
+footer h5 {
+    margin: 0;
+    padding-bottom: 50px;
+}
