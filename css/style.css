@@ -1,19 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Roboto+Mono:wght@400;500;600;700&family=Rubik:wght@500;600;700;800;900&display=swap');
+
 html,
 body {
     margin: 0;
     padding: 0;
+    font-family: 'Inter', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(300deg,#ff0072,#0077ff);
+    background-size: 120% 120%;
+    animation: gradient-animation 2s ease infinite;
 }
 
 section {
     height: 100vh;
 }
 
+h1, h2, h3, h5, p {
+    color: #ffffff;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 /* Home */
 
 #home {
-    background-color: pink;
-display: flex;
-align-items: center;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+    justify-content: center;
+    /* background-image: url(../images/7.jpg); */
+    /* background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom; */
 }
 
 #home a {
@@ -21,42 +48,70 @@ align-items: center;
     top: 30px;
     left: 30px;
     text-decoration: none;
-
 }
 
-/* #home h1, h2 {
-position: absolute;
-margin-left: 100px;
+#home img {
+    width: 100%;
 }
 
-#home h1 {
-    top: 60%;
+.titles {
+    text-align: left;
+    color: white;
+    /* margin-right: 80px; */
 }
 
-#home h2 {
-    top: 70%;
-} */
+.titles h1 {
+    font-size: 70px;
+}
+
+.titles h2 {
+    font-size: 30px;
+}
+
+/* general */
+
+.title {
+    font-size: 50px;
+    color: white;
+}
 
 /* About */
 
 #about {
+    display: flex;
+    border-radius: 25px;
+    align-items: center;
+    justify-content: center;
+
+}
+.test{
     display: grid;
     grid-template-columns: 50% 50%;
+    height: 80%;
+    width: 90%;
 }
 
 .about-image {
-    height: 100%;
-    width: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url(../images/profile.png)
+    background-image: url(../images/profile.png);
+    border-radius: 25px 0 0 25px;
+    align-items: center;
+}
+
+.about-description {
+    display: flex;
+    background-color: white;
+    border-radius: 0 25px 25px 0;
+    align-items: center;
+    text-align: justify;
+    padding: 50px;
 }
 
 /* Skills */
 
 #skills {
-    background-color: pink;
     display: grid;
     grid-template-columns: 50% 50%;
     align-items: center;
@@ -64,6 +119,12 @@ margin-left: 100px;
 
 #skills h3 {
     text-align: center;
+}
+
+#skills .list li{
+    font-size: 30px;
+    padding: 30px 0;
+    font-weight: 700;
 }
 
 /* Projects */
@@ -78,10 +139,15 @@ margin-left: 100px;
     text-align: center;
 }
 
+#projects .list li{
+    font-size: 70px;
+    padding: 30px 0;
+    font-weight: 700;
+}
+
 /* Contact */
 
 #contact {
-    background-color: pink;
     display: grid;
     grid-template-columns: 50% 50%;
     align-items: center;
@@ -93,17 +159,18 @@ margin-left: 100px;
 
 #contact p {
     padding-left: 0;
+    padding-right: 50px;
 }
 
-.contact-info ul {
-list-style-type: none;
-padding: 0;
+.list {
+    list-style-type: none;
+    padding: 0;
+    color: white;
 }
 
 /* Footer */
 
-footer  {
-    background-color: pink;
+footer {
     text-align: center;
 }
 
