@@ -5,7 +5,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Inter', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(300deg,#ff0072,#0077ff);
+    background: linear-gradient(300deg, #ff0072, #0077ff);
     background-size: 120% 120%;
     animation: gradient-animation 5s ease infinite;
 }
@@ -15,17 +15,21 @@ body {
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
-  }
-  
-  .scroller section {
+}
+
+.scroller section {
     scroll-snap-align: start;
-  }
+}
 
 section {
     height: 100vh;
 }
 
-h1, h2, h3, h5, p {
+h1,
+h2,
+h3,
+h5,
+p {
     color: #ffffff;
 }
 
@@ -35,15 +39,17 @@ p {
 }
 
 @keyframes gradient-animation {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 /* Home */
@@ -69,6 +75,13 @@ nav {
 
 nav a {
     margin: 0 50px;
+    transition: background-color 0.3s;
+}
+
+.menu-icon {
+    display: none;
+    color: #ffffff;
+    font-size: 30px;
 }
 
 .link {
@@ -79,22 +92,22 @@ nav a {
 }
 
 .link::before {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 5px;
-  border-radius: 4px;
-  background-color: #ffffff;
-  bottom: -10px;
-  left: 0;
-  transform-origin: right;
-  transform: scaleX(0);
-  transition: transform .3s ease-in-out;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    border-radius: 4px;
+    background-color: #ffffff;
+    bottom: -10px;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
 }
 
 .link:hover::before {
-  transform-origin: left;
-  transform: scaleX(1);
+    transform-origin: left;
+    transform: scaleX(1);
 }
 
 .project-link::before {
@@ -142,7 +155,8 @@ nav a {
     justify-content: center;
 
 }
-.test{
+
+.test {
     display: grid;
     grid-template-columns: 50% 50%;
     height: 80%;
@@ -187,7 +201,7 @@ nav a {
     text-align: center;
 }
 
-#skills .list li{
+#skills .list li {
     font-size: 30px;
     padding: 30px 0;
     font-weight: 700;
@@ -205,7 +219,7 @@ nav a {
     text-align: center;
 }
 
-#projects .list li{
+#projects .list li {
     font-size: 70px;
     padding: 30px 0;
     font-weight: 700;
@@ -252,4 +266,46 @@ footer {
 footer h5 {
     margin: 0;
     padding-bottom: 50px;
+}
+
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    #home {
+        align-items: start;
+    }
+
+
+    nav {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    nav a {
+        margin-bottom: 20px;
+        text-align: right;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+    }
+
+    .menu-icon {
+        display: block;
+        cursor: pointer;
+        margin-bottom: 20px;
+        margin-right: 50px;
+
+    }
+
+    .menu-items.show, .menu-items.hide {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .menu-items.show a {
+        opacity: 1;
+    }
 }

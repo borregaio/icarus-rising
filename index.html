@@ -12,10 +12,14 @@
 <body>
     <!-- <div class="scroller"> -->
     <nav>
-        <a class="link" href="#about">About</a>
-        <a class="link" href="#skills">Skills</a>
-        <a class="link" href="#projects">Projects</a>
-        <a class="link" href="#contact">Contact</a>
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+        <div class="menu-items hide">
+            <a class="link" href="#about">About</a>
+            <a class="link" href="#skills">Skills</a>
+            <a class="link" href="#projects">Projects</a>
+            <a class="link" href="#contact">Contact</a>
+        </div>
+
     </nav>
     <section id="home">
 
@@ -35,17 +39,17 @@
                 <p>My name is Carlos Borrega and I'm a self-taught Front-End Web Developer who is constantly seeking new
                     knowledge and growth. I am deeply passionate about my work and embrace challenges with enthusiasm.
                     Pushing my limits and dedicating myself to hard work are where I truly excel.
-                    
+
                     Prior to my journey into web development, I gained valuable experience in the retail sector as a
                     manager and visual merchandiser. This role honed my problem-solving abilities, taught me to adapt
                     quickly, and highlighted the power of teamwork.
-                    
+
                     My current skill set encompasses HTML, CSS, JavaScript, NodeJS, and MongoDB. Additionally, I am
                     eagerly immersing myself in learning React to elevate my expertise to the next level.
-                    
+
                     My ultimate ambition is to join an exceptional team where collaboration reigns and together we can
                     create awe-inspiring projects.
-                    
+
                     If you would like to learn more about my past work experiences, please feel free to download my
                     resume from the link below. Thank you for visiting my portfolio, and I look forward to the
                     possibility of working together in the future!
@@ -80,7 +84,8 @@
     <section id="contact">
         <h3 class="title">Get In Touch!</h3>
         <ul class="list">
-            <li><a class="link" href="https://www.linkedin.com/in/carlosborrega/"><i class="fa-brands fa-linkedin"></i>LinkedIn</a></li>
+            <li><a class="link" href="https://www.linkedin.com/in/carlosborrega/"><i
+                        class="fa-brands fa-linkedin"></i>LinkedIn</a></li>
             <li><a class="link" href="https://github.com/borregaio"><i class="fa-brands fa-github"></i>Github</a></li>
             <li><a class="link" href="mailto:c.borrega@proton.me"><i class="fa-solid fa-paper-plane"></i>Email</a></li>
         </ul>
@@ -91,6 +96,13 @@
 
     <!-- </div> -->
     <script src="https://kit.fontawesome.com/bb8d2ebf9e.js" crossorigin="anonymous"></script>
+    <script>
+        function toggleMenu() {
+            var menuItems = document.querySelector('.menu-items');
+            menuItems.classList.toggle('show');
+            menuItems.classList.toggle('hide');
+        }
+    </script>
 </body>
 
 </html>
