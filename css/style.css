@@ -280,6 +280,10 @@ footer {
         height: 100%;
     }
 
+    #scroller section {
+        scroll-snap-align:unset;
+    }
+
     nav {
         top: 30px;
     }
