@@ -263,13 +263,47 @@ footer {
     text-align: center;
 }
 
+/* Tablets */
+@media only screen and (max-width: 768px) {}
+
 
 /* Mobile */
 
-@media (max-width: 600px) {
+@media only screen and (max-width: 480px) {
+
+    body {
+        /* background: #0077ff; */
+        padding: 20px;
+    }
+
+    section {
+        height: 100%;
+    }
+
+    nav {
+        top: 30px;
+    }
 
     #home {
+        /* align-items: start; */
+        display: flex;
+        flex-direction: column;
+        justify-content: unset;
+        height: fit-content;
         align-items: start;
+    }
+
+    #home .headings {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #home img,
+    .headings h1,
+    .headings h2 {
+        justify-content: center;
+        display: inline;
     }
 
 
@@ -303,4 +337,41 @@ footer {
     .menu-items.show a {
         opacity: 1;
     }
+
+    .about-info {
+        grid-template-columns: auto;
+        grid-template-rows: 50% 50%;
+    }
+
+    .about-image {
+        border-radius: 25px 25px 0 0;
+    }
+
+    .about-description {
+        border-radius: 0 0 25px 25px;
+    }
+
+    #skills {
+        grid-template-columns: auto;
+        grid-template-rows: 20% 80%;
+    }
+
+    #skills li {
+        text-align: center;
+    }
+
+    #projects {
+        grid-template-columns: auto;
+        grid-template-rows: 20% 80%;
+    }
+
+    .list {
+        text-align: center;
+    }
+
+    .contact-info {
+        grid-template-columns: auto;
+        grid-template-rows: 20% 60%;
+    }
+
 }
